@@ -22,7 +22,6 @@ export default function Page({ params }) {
             setDocument(parsedDoc);
 
             const subheading = parsedDoc.content[0].match(/&h2;(.*?)&\/h2;/);
-            console.log(subheading);
             setCurrentView(subheading[1].toLowerCase().replace(' ', '-'));
         };
 

@@ -36,11 +36,11 @@ export default async (phase, { defaultConfig }) => {
                             key: 'Content-Security-Policy',
                             value: `
                             default-src 'self';
-                            script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com;
+                            script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://us-assets.i.posthog.com;
                             style-src 'self' 'unsafe-inline';
                             img-src 'self' data: https://cdn.polarlab.app;
                             font-src 'self';
-                            connect-src 'self' https://api.polarlab.app;
+                            connect-src 'self' https://api.polarlab.app https://us.i.posthog.com;
                             frame-src 'self';
                             object-src 'none';
                             base-uri 'self';

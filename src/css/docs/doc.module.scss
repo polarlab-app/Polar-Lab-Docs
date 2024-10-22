@@ -11,6 +11,28 @@
     background-color: var(--primary-bg);
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg) var(--primary-bg);
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--primary-bg);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--secondary-bg);
+        border-radius: 6px;
+        transition: background 500ms ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-border);
+        transition: background 500ms ease;
+        cursor: pointer;
+    }
 
     &.dark {
         --primary-color: white;
@@ -86,34 +108,18 @@
         background-color: var(--secondary-bg);
         border: 1px solid var(--primary-border);
         display: flex;
-        flex-direction: column;
         border-radius: 6px;
         font-size: 0.9rem;
+
+        .noteIcon {
+            padding-right: 14px;
+            font-size: 1rem;
+        }
 
         .noteContent {
             margin: 0;
             color: var(--secondary-color);
             transition: all 500ms ease;
-        }
-
-        .noteHeader {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding-bottom: 8px;
-
-            &.moon {
-                color: #f76f6d;
-            }
-
-            .noteIcon {
-                padding-right: 8px;
-            }
-
-            .noteHeading {
-                text-shadow: 0 0 10px #f76f6d;
-                margin: 0;
-            }
         }
     }
 
@@ -162,7 +168,6 @@
             border-bottom: 1px solid var(--primary-border);
             padding: 8px;
             margin: 0;
-            border-radius: 6px;
             transition: all 500ms ease;
 
             .tr {
@@ -198,40 +203,40 @@
         }
     }
 
-	.quote {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		.marker {
-			height: 100%;
-			background-color: var(--secondary-bg);
-			border-radius: 6px;
-			width: 6px;
-			margin-right: 12px;
-		}
+    .quote {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .marker {
+            height: 100%;
+            background-color: var(--secondary-bg);
+            border-radius: 6px;
+            width: 6px;
+            margin-right: 12px;
+        }
 
-		.quoteText {
-			font-size: 0.9rem;
-			color: var(--secondary-color);
-			transition: all 500ms ease;
-		}
-	}
+        .quoteText {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            transition: all 500ms ease;
+        }
+    }
 
-	.quote,
-	.table,
-	.codeblock,
-	.image,
-	.list,
-	.path,
-	.subheading,
-	.heading,
-	.text,
-	.headingDivider,
-	.note,
-	.subheadingDivider {
-		margin: 1% 0;
-		transition: all 500ms ease;
-	}
+    .quote,
+    .table,
+    .codeblock,
+    .image,
+    .list,
+    .path,
+    .subheading,
+    .heading,
+    .text,
+    .headingDivider,
+    .note,
+    .subheadingDivider {
+        margin: 1% 0;
+        transition: all 500ms ease;
+    }
 }
 
 @media screen and (max-width: 1000px) {

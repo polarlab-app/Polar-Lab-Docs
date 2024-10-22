@@ -21,10 +21,9 @@ export default function Page({ params }) {
 			const parsedDoc = await JSON.parse(res);
 			setDocument(parsedDoc);
 
-			const subheading = parsedDoc.content[0].match(/&h2;(.*?)&\/h2;/);
-			console.log(subheading);
-			setCurrentView(subheading[1].toLowerCase().replace(' ', '-'));
-		};
+            const subheading = parsedDoc.content[0].match(/&h2;(.*?)&\/h2;/);
+            setCurrentView(subheading[1].toLowerCase().replace(' ', '-'));
+        };
 
 		fetchDocument();
 	}, [setCurrentView]);

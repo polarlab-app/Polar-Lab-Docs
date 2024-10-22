@@ -11,8 +11,6 @@
     background-color: var(--primary-bg);
     overflow-x: hidden;
     overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary-bg) var(--primary-bg);
 
     &::-webkit-scrollbar {
         width: 6px;

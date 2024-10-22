@@ -155,6 +155,7 @@
         margin: 0;
         border-collapse: collapse;
         overflow: hidden;
+        box-sizing: border-box;
 
         .thead {
             background-color: var(--secondary-bg);
@@ -171,7 +172,6 @@
                 border: none;
 
                 .th {
-                    width: 50%;
                     padding: 12px;
                     margin: 0;
                     border: none;
